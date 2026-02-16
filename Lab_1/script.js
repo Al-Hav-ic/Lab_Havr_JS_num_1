@@ -76,7 +76,13 @@ function triangle(val1, type1, val2, type2) {
             return "failed";
         }
 
-        if (!isFinite(a) || !isFinite(b) || !isFinite(c) || a < 0 || b < 0) {
+        if (
+            !isFinite(a) || !isFinite(b) || !isFinite(c) || 
+            !isFinite(alpha) || !isFinite(beta) ||
+            a < 0 || b < 0 || 
+            alpha <= 0 || alpha >= 90 || 
+            beta <= 0 || beta >= 90
+        ) {
             return "failed";
         }
 

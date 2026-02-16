@@ -7,7 +7,6 @@ console.log("- Не можна вводити два кути (без хоча �
 console.log("- Не можна вводити гіпотенузу та прилеглий/протилежний кут (використовуйте тип 'angle').");
 
 function triangle(val1, type1, val2, type2) {
-    // 1. Перевірка на додатні значення
     if (val1 <= 0 || val2 <= 0) {
         console.log("Zero or negative input");
         return "Zero or negative input";
@@ -24,7 +23,6 @@ function triangle(val1, type1, val2, type2) {
     const has = (type) => types.includes(type);
 
     try {
-        // 2. Вибір сценарію залежно від типів
         if (has('leg') && has('hypotenuse')) {
             a = getVal('leg');
             c = getVal('hypotenuse');
@@ -32,7 +30,7 @@ function triangle(val1, type1, val2, type2) {
                 console.log("Катет не може бути більшим за гіпотенузу");
                 return "failed";
             }
-            // Використовуємо запобіжник для Math.sqrt
+            
             let diff = c * c - a * a;
             b = Math.sqrt(diff < 0 ? 0 : diff);
             alpha = toDeg(Math.asin(a / c));
@@ -50,7 +48,6 @@ function triangle(val1, type1, val2, type2) {
             beta = getVal('adjacent angle');
             if (beta >= 90) return "failed";
             
-            // Прямі обчислення від вхідного кута beta для мінімізації похибки
             alpha = 90 - beta;
             c = b / Math.cos(toRad(beta));
             a = b * Math.tan(toRad(beta)); 
@@ -61,7 +58,7 @@ function triangle(val1, type1, val2, type2) {
             if (alpha >= 90) return "failed";
             
             beta = 90 - alpha;
-            // Прямі обчислення від вхідного кута alpha
+            
             c = a / Math.sin(toRad(alpha));
             b = a / Math.tan(toRad(alpha));
         }
@@ -79,12 +76,10 @@ function triangle(val1, type1, val2, type2) {
             return "failed";
         }
 
-        // 3. Перевірка на граничні значення (якщо результат Infinity або NaN)
         if (!isFinite(a) || !isFinite(b) || !isFinite(c) || a <= 0 || b <= 0) {
             return "failed";
         }
 
-        // 4. Форматований вивід (округлення до 8 знаків прибирає шум плаваючої коми)
         console.log(`a = ${+a.toFixed(8)}`);
         console.log(`b = ${+b.toFixed(8)}`);
         console.log(`c = ${+c.toFixed(8)}`);

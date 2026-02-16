@@ -80,11 +80,12 @@ function triangle(val1, type1, val2, type2) {
             return "failed";
         }
 
-        console.log(`a = ${+a.toFixed(8)}`);
-        console.log(`b = ${+b.toFixed(8)}`);
-        console.log(`c = ${+c.toFixed(8)}`);
-        console.log(`alpha = ${+alpha.toFixed(8)}`);
-        console.log(`beta = ${+beta.toFixed(8)}`);
+        console.log(`a = ${+a.toFixed(10)+0}`);
+        console.log(`b = ${+b.toFixed(10)+0}`);
+        console.log(`c = ${+c.toFixed(10)+0}`);
+        console.log(`alpha = ${+alpha.toFixed(10)+0}`);
+        console.log(`beta = ${+beta.toFixed(10)+0}`);
+;
 
         return "success";
 

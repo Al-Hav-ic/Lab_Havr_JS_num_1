@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Lights Out</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header>
+            <h1>Lights Out</h1>
+            <h2 id="level-name">Завантаження...</h2>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-box">
+                <span class="label">Мета (кроків):</span>
+                <span class="value" id="target-moves">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Твої кроки:</span>
+                <span class="value" id="current-moves">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Час:</span>
+                <span class="value" id="timer">0:00</span>
+            </div>
+        </div>
+
+        <div id="board" class="board"></div>
+
+        <div class="controls">
+            <button id="btn-restart" class="btn">Почати заново</button>
+            <button id="btn-next-level" class="btn btn-primary">Наступний рівень</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Рівень пройдено! 🎉</h2>
+            <p>Ти впорався за <span id="win-moves">0</span> кроків.</p>
+            <button id="btn-modal-next" class="btn btn-primary">Далі</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

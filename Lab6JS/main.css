@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-wrapper {
+    background: #1e1e24;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #00e5ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: 1rem;
+    color: #aaaaaa;
+    margin-top: 5px;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-between;
+    background: #2a2a35;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.stat-box .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Ігрове поле */
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 10px;
+    background-color: #333344;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cell:hover {
+    filter: brightness(1.2);
+}
+
+/* Стан УВІМКНЕНОГО світла */
+.cell.active {
+    background-color: #00e5ff;
+    box-shadow: 0 0 15px #00e5ff, inset 0 0 10px rgba(255,255,255,0.5);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #444455;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #555566; }
+
+.btn-primary {
+    background: #00e5ff;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-primary:hover { background: #00c4dd; }
+
+/* Модальне вікно */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal.hidden { display: none; }
+
+.modal-content {
+    background: #1e1e24;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px #00e5ff;
+}
+
+.modal-content h2 { margin-bottom: 10px; color: #00e5ff; }
+.modal-content p { margin-bottom: 20px; font-size: 1.2rem; }

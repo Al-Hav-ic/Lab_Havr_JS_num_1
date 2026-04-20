@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #2b2b46, #11111a);
+    color: white;
+    height: 100vh;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.menu-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+h1 { margin-bottom: 0.5rem; font-size: 2.5rem; color: #00d2ff; }
+h2 { margin-bottom: 1rem; color: #ff4b4b; }
+.subtitle { margin-bottom: 2rem; color: #aaa; }
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem;}
+select {
+    width: 100%; padding: 0.8rem;
+    border-radius: 8px; border: none;
+    background: #fff; color: #333;
+    font-size: 1rem; cursor: pointer;
+}
+
+button {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    border: none; color: white;
+    padding: 1rem 2rem; font-size: 1.2rem;
+    border-radius: 30px; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%; font-weight: bold;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+}
+
+#error-message { color: #ff4b4b; margin-bottom: 1rem; font-size: 0.9rem; }
+
+#game-ui {
+    position: absolute; top: 0; left: 0;
+    width: 100%; padding: 1.5rem;
+    display: flex; justify-content: space-between;
+    font-size: 1.5rem; font-weight: bold;
+    pointer-events: none; 
+    z-index: 5;
+}
+
+#target {
+    position: absolute;
+    display: flex; justify-content: center; align-items: center;
+    cursor: crosshair;
+    user-select: none;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: transform 0.1s;
+}
+#target:active { transform: scale(0.8); } 
+
+.skin-red-dot { background-color: red; box-shadow: 0 0 15px red; }
+.skin-alien::after { content: '👽'; font-size: 200%; }
+.skin-target::after { content: '🎯'; font-size: 200%; }

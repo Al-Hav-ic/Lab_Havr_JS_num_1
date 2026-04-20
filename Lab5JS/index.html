@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-menu" class="menu-container">
+        <h1>Pixel Hunt</h1>
+        <p class="subtitle">Перевір свою реакцію!</p>
+        
+        <div class="form-group">
+            <label for="difficulty">Рівень складності:</label>
+            <select id="difficulty">
+                <option value="">-- Оберіть рівень --</option>
+                <option value="easy">Легкий (Великий, 3 сек)</option>
+                <option value="normal">Середній (Менший, 2 сек)</option>
+                <option value="hard">Складний (Малий, 1 сек)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="skin">Зовнішній вигляд:</label>
+            <select id="skin">
+                <option value="">-- Оберіть скін --</option>
+                <option value="red-dot">🔴 Червона крапка</option>
+                <option value="alien">👽 Прибулець</option>
+                <option value="target">🎯 Мішень</option>
+            </select>
+        </div>
+
+        <div id="error-message" class="hidden">Будь ласка, оберіть рівень та скін!</div>
+        
+        <button id="btn-start">Почати гру</button>
+    </div>
+
+    <div id="game-ui" class="hidden">
+        <div class="stats">
+            <div>Рахунок: <span id="score-display">0</span></div>
+            <div>Час: <span id="time-display">0.0</span> с</div>
+        </div>
+    </div>
+
+    <div id="game-over-menu" class="menu-container hidden">
+        <h2>Гра закінчена!</h2>
+        <p>Ваш фінальний рахунок: <span id="final-score">0</span></p>
+        <button id="btn-restart">Грати знову</button>
+    </div>
+
+    <div id="target" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

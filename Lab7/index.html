@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechStore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== НАВІГАЦІЯ ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">Tech<span>Store</span></a>
+
+      <!-- Кнопка гамбургер (тільки Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Desktop nav: іконки + написи; Mobile nav: випадаюче меню -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="#" class="nav-link active" data-section="home">
+              <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V21H15v-5h-6v5H3z"/></svg>
+              <span>Головна</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="catalog">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="about">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <span>Про нас</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="contact">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Контакти</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="specials">
+              <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <span>Акції</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== ГОЛОВНИЙ КОНТЕНТ ===================== -->
+  <main class="main-content">
+
+    <!-- ---- Секція: Головна ---- -->
+    <section class="section" id="section-home">
+
+      <!-- КАРУСЕЛЬ -->
+      <div class="carousel-wrapper">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-slide" style="background: linear-gradient(135deg,#1a1a2e,#16213e)">
+              <img src="https://placehold.co/1200x500/16213e/e94560?text=Gaming+Laptops&font=montserrat" alt="Gaming Laptops" />
+              <div class="slide-caption"><h2>Gaming Laptops</h2><p>Відчуй справжню потужність</p></div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(135deg,#0f3460,#533483)">
+              <img src="https://placehold.co/1200x500/0f3460/e2d9f3?text=Smartphones&font=montserrat" alt="Smartphones" />
+              <div class="slide-caption"><h2>Смартфони 2025</h2><p>Найкращі камери на ринку</p></div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(135deg,#1b4332,#40916c)">
+              <img src="https://placehold.co/1200x500/1b4332/d8f3dc?text=Audio+Gear&font=montserrat" alt="Audio Gear" />
+              <div class="slide-caption"><h2>Аудіо техніка</h2><p>Звук без компромісів</p></div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(135deg,#7b2d00,#dc6315)">
+              <img src="https://placehold.co/1200x500/7b2d00/ffddd2?text=Special+Deals&font=montserrat" alt="Deals" />
+              <div class="slide-caption"><h2>Спеціальні пропозиції</h2><p>До -40% на все</p></div>
+            </div>
+            <div class="carousel-slide" style="background: linear-gradient(135deg,#212121,#616161)">
+              <img src="https://placehold.co/1200x500/212121/f5f5f5?text=Accessories&font=montserrat" alt="Accessories" />
+              <div class="slide-caption"><h2>Аксесуари</h2><p>Доповни свій пристрій</p></div>
+            </div>
+          </div>
+
+          <!-- Стрілки -->
+          <button class="carousel-btn carousel-btn--prev" id="carousel-prev" aria-label="Попередній">&#8249;</button>
+          <button class="carousel-btn carousel-btn--next" id="carousel-next" aria-label="Наступний">&#8250;</button>
+
+          <!-- Індикатори -->
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+
+      <!-- Зображення ТІЛЬКИ для Large (≥768px) -->
+      <div class="device-section large-only">
+        <h3 class="section-title">Топ категорії <span class="badge">Desktop</span></h3>
+        <div class="grid-3">
+          <figure>
+            <img src="https://placehold.co/400x280/e63946/ffffff?text=Laptops+%F0%9F%92%BB&font=montserrat" alt="Ноутбуки" />
+            <figcaption>Ноутбуки</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/400x280/457b9d/ffffff?text=Phones+%F0%9F%93%B1&font=montserrat" alt="Смартфони" />
+            <figcaption>Смартфони</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/400x280/2d6a4f/ffffff?text=Audio+%F0%9F%8E%A7&font=montserrat" alt="Аудіо" />
+            <figcaption>Аудіо</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Зображення ТІЛЬКИ для Medium (<768px) -->
+      <div class="device-section medium-only">
+        <h3 class="section-title">Популярне <span class="badge badge--alt">Mobile</span></h3>
+        <div class="grid-2">
+          <figure>
+            <img src="https://placehold.co/360x220/e76f51/ffffff?text=Deals+%F0%9F%94%A5&font=montserrat" alt="Акції" />
+            <figcaption>Гарячі акції</figcaption>
+          </figure>
+          <figure>
+            <img src="https://placehold.co/360x220/264653/ffffff?text=New+%E2%9C%A8&font=montserrat" alt="Новинки" />
+            <figcaption>Новинки</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ---- Секція: Каталог ---- -->
+    <section class="section hidden" id="section-catalog">
+      <h2 class="page-title">Каталог товарів</h2>
+      <div id="catalog-content">
+        <div class="spinner"></div>
+      </div>
+    </section>
+
+    <!-- ---- Секція: Про нас ---- -->
+    <section class="section hidden" id="section-about">
+      <h2 class="page-title">Про нас</h2>
+      <p class="about-text">TechStore — це ваш надійний партнер у світі технологій. Ми пропонуємо найкращий вибір електроніки за вигідними цінами з 2015 року.</p>
+    </section>
+
+    <!-- ---- Секція: Контакти ---- -->
+    <section class="section hidden" id="section-contact">
+      <h2 class="page-title">Контакти</h2>
+      <p class="about-text">📍 м. Львів, вул. Технологічна 1<br>📞 +38 (032) 123-45-67<br>✉️ info@techstore.ua</p>
+    </section>
+
+    <!-- ---- Секція: Акції ---- -->
+    <section class="section hidden" id="section-specials">
+      <h2 class="page-title">Спеціальні пропозиції 🎁</h2>
+      <div id="specials-content">
+        <div class="spinner"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== ПІДВАЛ ===================== -->
+  <footer class="site-footer">
+    <p>&copy; 2025 TechStore. Всі права захищені.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

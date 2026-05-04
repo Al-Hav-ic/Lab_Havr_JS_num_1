@@ -1,0 +1,25 @@
+{
+  "categoryName": "Ноутбуки",
+  "items": [
+    {
+      "id": 101, "name": "Ultrabook Pro 14", "shortname": "ultra-14",
+      "description": "Тонкий та легкий ноутбук. Lorem ipsum dolor sit amet.",
+      "price": "35 000 ₴"
+    },
+    {
+      "id": 102, "name": "Gaming Beast X", "shortname": "game-x",
+      "description": "Ігровий ноутбук з відеокартою RTX. Lorem ipsum dolor sit.",
+      "price": "52 000 ₴"
+    },
+    {
+      "id": 103, "name": "DevMachine 16", "shortname": "dev-16",
+      "description": "Ідеально підходить для програмування. 32GB RAM.",
+      "price": "48 000 ₴"
+    },
+    {
+      "id": 104, "name": "Budget Book", "shortname": "budget-b",
+      "description": "Бюджетне рішення для навчання та офісу.",
+      "price": "15 000 ₴"
+    }
+  ]
+}

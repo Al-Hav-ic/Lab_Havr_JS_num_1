@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна робота №8</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">6 - 7</a>
+
+    <ul class="nav-links">
+      <li><a href="#carousel"><span class="icon">🎠</span>Карусель</a></li>
+      <li><a href="#large-imgs"><span class="icon">🖼️</span>Галерея</a></li>
+      <li><a href="#medium-imgs"><span class="icon">📱</span>Мобільні</a></li>
+      <li><a href="#about"><span class="icon">💡</span>Ajax</a></li>
+      <li><a href="#contact"><span class="icon">✉️</span>Контакт</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <ul class="mobile-menu" id="mobile-menu">
+    <li><a href="#carousel" class="mob-link"><span class="icon">🎠</span> Карусель</a></li>
+    <li><a href="#large-imgs" class="mob-link"><span class="icon">🖼️</span> Галерея</a></li>
+    <li><a href="#medium-imgs" class="mob-link"><span class="icon">📱</span> Мобільні</a></li>
+    <li><a href="#about" class="mob-link"><span class="icon">💡</span> Ajax / JSON</a></li>
+    <li><a href="#contact" class="mob-link"><span class="icon">✉️</span> Контакт</a></li>
+  </ul>
+
+  <div class="hero">
+    <h1>Лабораторна<br>Робота №8</h1>
+    <p>Lorem ipsum </p>
+  </div>
+
+  <section class="section" id="carousel">
+    <div class="section-label">▶ Карусель</div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="track">
+        <div class="slide">
+          <img src="https://placehold.co/1200x500/0f2027/e0ff4f?text=Слайд+1" alt="Слайд 1" />
+          <div class="slide-caption">Слайд 01 — Природа</div>
+        </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x500/1a0533/ff4f9e?text=Слайд+2" alt="Слайд 2" />
+          <div class="slide-caption">Слайд 02 — Міські пейзажі</div>
+        </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x500/003333/4fffdf?text=Слайд+3" alt="Слайд 3" />
+          <div class="slide-caption">Слайд 03 — Архітектура</div>
+        </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x500/200a00/ff8f4f?text=Слайд+4" alt="Слайд 4" />
+          <div class="slide-caption">Слайд 04 — Технології</div>
+        </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x500/0a1a00/a4ff4f?text=Слайд+5" alt="Слайд 5" />
+          <div class="slide-caption">Слайд 05 — Майбутнє</div>
+        </div>
+      </div>
+
+      <button class="carousel-btn prev" id="prev" aria-label="Попередній">&#8592;</button>
+      <button class="carousel-btn next" id="next" aria-label="Наступний">&#8594;</button>
+
+      <div class="carousel-dots" id="dots"></div>
+    </div>
+  </section>
+
+  <section class="section large-only" id="large-imgs">
+    <div class="section-label">🖥️ Тільки для великих екранів (≥768px)</div>
+    <div class="img-grid">
+      <img src="https://placehold.co/600x220/0d1b2a/e0ff4f?text=Large+1" alt="Large 1" />
+      <img src="https://placehold.co/600x220/1b0d2a/ff4f9e?text=Large+2" alt="Large 2" />
+      <img src="https://placehold.co/600x220/0d2a1b/4fffdf?text=Large+3" alt="Large 3" />
+    </div>
+  </section>
+
+  <section class="section medium-only" id="medium-imgs">
+    <div class="section-label">📱 Тільки для малих екранів (&lt;768px)</div>
+    <div class="img-grid">
+      <img src="https://placehold.co/400x220/2a1b0d/ff8f4f?text=Mobile+1" alt="Mobile 1" />
+      <img src="https://placehold.co/400x220/0d2a2a/a4ff4f?text=Mobile+2" alt="Mobile 2" />
+    </div>
+  </section>
+
+  <section class="section" id="about" style="max-width:800px;">
+    <div class="section-label">💡 Ajax та JSON</div>
+    <p style="line-height:1.75; color:var(--muted); font-size:0.95rem;">
+      <strong style="color:var(--text)">Ajax</strong> — техніка асинхронної взаємодії браузера з сервером: 
+      замість перезавантаження всієї сторінки відправляється лише невеликий HTTP-запит, 
+      і у відповідь приходить порція даних (найчастіше у форматі <strong style="color:var(--accent)">JSON</strong>), 
+      яка динамічно вставляється у поточний DOM.<br><br>
+      <strong style="color:var(--text)">JSON</strong> — текстовий формат обміну даними, підмножина синтаксису 
+      об'єктних літералів JavaScript.
+    </p>
+  </section>
+
+  <footer>
+    <span>Лабораторна робота №8 — JavaScript</span>
+    <span style="color:var(--accent)">6 - 7</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
